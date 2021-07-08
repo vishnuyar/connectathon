@@ -1,5 +1,5 @@
 @ECHO OFF
-SET tooling_jar=tooling-1.0.4-SNAPSHOT-jar-with-dependencies.jar
+SET tooling_jar=tooling-1.1.1-SNAPSHOT-jar-with-dependencies.jar
 SET input_cache_path=%~dp0input-cache
 
 ECHO Checking internet connection...
@@ -10,7 +10,7 @@ GOTO igpublish
 
 :isonline
 ECHO We're online, setting publish to the Connectathon sandbox FHIR server
-SET fsoption=-fs http://cqm-sandbox.alphora.com/cqf-ruler-r4/fhir/
+SET fsoption=-fs http://localhost:8080/cqf-ruler-r4/fhir/
 
 :igpublish
 
